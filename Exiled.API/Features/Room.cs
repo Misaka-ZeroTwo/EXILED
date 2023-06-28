@@ -440,7 +440,7 @@ namespace Exiled.API.Features
             Type = FindType(gameObject);
 
             Identifier = gameObject.GetComponent<RoomIdentifier>();
-            RoomLightController = gameObject.GetComponentInChildren<RoomLightController>();
+            RoomLightController = Identifier.GetComponentInChildren<RoomLightController>();
 
             Doors = DoorVariant.DoorsByRoom.ContainsKey(Identifier) ? DoorVariant.DoorsByRoom[Identifier].Select(x => Door.Get(x, this)).ToList() : new();
             Cameras = Camera.List.Where(x => x.Base.Room == Identifier).ToList();
