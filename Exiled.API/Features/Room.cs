@@ -332,7 +332,7 @@ namespace Exiled.API.Features
         /// <summary>
         /// Resets the room color to default.
         /// </summary>
-        public void ResetColor() => Color = Color.clear.
+        public void ResetColor() => Color = Color.clear;
 
         /// <summary>
         /// Returns the Room in a human-readable format.
